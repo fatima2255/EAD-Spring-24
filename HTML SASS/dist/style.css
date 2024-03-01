@@ -1,0 +1,179 @@
+/* Variables */
+/* Base styles */
+body {
+  font-family: Arial, sans-serif, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  max-width: 70%;
+  height: 50%;
+}
+
+/* Header */
+header {
+  background-color: #E2BFB3;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Main */
+main {
+  padding: 50px;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+  margin-bottom: 50px;
+  background-color: #F7DED0;
+}
+
+.hero h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #E2BFB3;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.highlight {
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.highlight img {
+  margin-bottom: 10px;
+}
+
+.highlight h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  /* Optional: Align items to the top */
+  flex-direction: row;
+  /* Key change: Place items in a row  */
+}
+
+.container img {
+  margin-right: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #E2BFB3;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav {
+    text-align: center;
+  }
+
+  header nav li {
+    margin: 10px 0;
+  }
+
+  .highlights {
+    flex-direction: column;
+  }
+
+  .highlight {
+    width: 100%;
+  }
+}
+nav {
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  justify-content: flex-end;
+}
+
+nav ul {
+  display: flex;
+  /* Change to flex for horizontal alignment */
+  justify-content: flex-start;
+  /* Align items to the left */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  text-decoration: none;
+  margin: 0 17px;
+  /* Adjust margin as needed */
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+nav li::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background: #F7DED0;
+  position: absolute;
+  bottom: -10px;
+  /* Adjust the position from the bottom */
+  transition: 0.5s;
+  left: 50%;
+  /* Center the underline horizontally */
+  transform: translateX(-50%);
+  /* Center the underline horizontally */
+}
+
+nav li:hover::after {
+  width: 100%;
+}
